@@ -2,7 +2,7 @@
 #SBATCH --job-name="CDSS_requests"
 #SBATCH --output="requests.out"
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=5
+#SBATCH --ntasks-per-node=6
 #SBATCH --ntasks-per-core=1
 #SBATCH --export=ALL
 #SBATCH -t 0:10:00            # set max wallclock time
