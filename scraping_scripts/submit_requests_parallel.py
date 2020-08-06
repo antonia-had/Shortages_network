@@ -26,7 +26,6 @@ for index, row in rights.iloc[first_index:].iterrows():
         break
 
 rights_no=len(rights_to_request)
-print('{} rights to request'.format(str(rights_no)))
 print(rights_to_request)
 
 # =============================================================================
@@ -58,6 +57,7 @@ else:
 # =============================================================================
 for k in range(start, stop):
     adminNo = rights_to_request[k]
+    print(adminNo)
     WDID = wdids[k]
     startdate = dates[k]
     os.system("python3 url_request.py --adminNo {} --WDID {} --format csv --endDate 09/30/2019 "
