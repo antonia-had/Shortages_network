@@ -28,6 +28,7 @@ for index, row in rights.iloc[first_index:].iterrows():
 rights_no=len(rights_to_request)
 print('{} rights to request'.format(str(rights_no)))
 print(rights_to_request)
+
 # =============================================================================
 # Start parallelization
 # =============================================================================
@@ -37,6 +38,7 @@ comm = MPI.COMM_WORLD
 
 # Get the number of processors and the rank of processors
 rank = comm.rank
+print(rank)
 nprocs = comm.size
 
 # Determine the chunk which each processor will need to do
