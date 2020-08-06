@@ -24,8 +24,9 @@ for index, row in rights.iloc[first_index:].iterrows():
         with open('next_right','w') as f:
             f.write(str(index)+' '+row['Priority Admin No'])
         break
-rights_no=len(rights_to_request)
 
+rights_no=len(rights_to_request)
+print('{} rights to request'.format(str(rights_no)))
 # =============================================================================
 # Start parallelization
 # =============================================================================
