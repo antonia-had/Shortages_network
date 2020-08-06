@@ -56,5 +56,5 @@ for k in range(start, stop):
     adminNo = rights_to_request[k]
     WDID = wdids[k]
     startdate = dates[k]
-    os.system("python3 structure_call_analysis.py --adminNo {} --WDID {} --format csv --endDate 09/30/2019 "
+    os.system("python3 url_request.py --adminNo {} --WDID {} --format csv --endDate 09/30/2019 "
               "--startDate {} --apiKey dBTnllEokTHF4+NOiEopD0e3MDFLP7vH --output {}.csv".format(adminNo,WDID,startdate,adminNo))
