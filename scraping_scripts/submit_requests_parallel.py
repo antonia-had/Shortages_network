@@ -27,6 +27,7 @@ for index, row in rights.iloc[first_index:].iterrows():
 
 rights_no=len(rights_to_request)
 print('{} rights to request'.format(str(rights_no)))
+print(rights_to_request)
 # =============================================================================
 # Start parallelization
 # =============================================================================
