@@ -37,8 +37,8 @@ comm = MPI.COMM_WORLD
 
 # Get the number of processors and the rank of processors
 rank = comm.rank
-print(rank)
 nprocs = comm.size
+print(nprocs)
 
 # Determine the chunk which each processor will need to do
 count = int(math.floor(rights_no / nprocs))
