@@ -9,28 +9,26 @@ size = comm.Get_size()
 '''Master to determine number of tasks for the day and divide among cores'''
 if rank == 0:
     '''Identify rights to request so limit is not exceeded'''
+    # get list of rights already downloaded
+    fetched_dir = os.listdir('./fetched_data')
+    fetched_admins = [x[:-4] for x in fetched_dir]
     rights = pd.read_csv('../data/CDSS_WaterRights.csv', dtype='str')
-    try:
-        f = open('next_right', 'r')
-        next_right = f.read()
-        first_index = int(next_right.split()[0])
-    except:
-        first_index = 0
     rights_to_request = []
     wdids = []
     dates = []
     total_lines = 0
-    for index, row in rights.iloc[first_index:].iterrows():
-        total_lines += int(row['Lines'])
-        if total_lines < 800000:
-            rights_to_request.append(row['Priority Admin No'])
-            wdids.append(row['WDID'])
-            dates.append(row['Adjudication Date'])
-        else:
-            # Print placeholder right to pick up from next time
-            with open('next_right', 'w') as f:
-                f.write(str(index) + ' ' + row['Priority Admin No'])
-            break
+    for index, row in rights.iloc[0:].iterrows():
+        if not row['Priority Admin No'] in fetched_admins:
+            total_lines += int(row['Lines'])
+            if total_lines < 360927:#1000000:
+                rights_to_request.append(row['Priority Admin No'])
+                wdids.append(row['WDID'])
+                dates.append(row['Adjudication Date'])
+            else:
+                # Print placeholder right to pick up from next time
+                with open('next_right', 'w') as f:
+                    f.write(str(index) + ' ' + row['Priority Admin No'])
+                break
     '''Divide tasks to be executed by each core'''
     # determine the size of each sub-task
     ave, res = divmod(len(rights_to_request), size)
