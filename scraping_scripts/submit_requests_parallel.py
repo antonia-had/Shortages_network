@@ -20,7 +20,7 @@ if rank == 0:
     for index, row in rights.iloc[0:].iterrows():
         if not row['Priority Admin No'] in fetched_admins:
             total_lines += int(row['Lines'])
-            if total_lines < 360927:#1000000:
+            if total_lines < 1000000:
                 rights_to_request.append(row['Priority Admin No'])
                 wdids.append(row['WDID'])
                 dates.append(row['Adjudication Date'])
