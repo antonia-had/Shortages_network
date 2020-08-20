@@ -25,9 +25,6 @@ if rank == 0:
                 wdids.append(row['WDID'])
                 dates.append(row['Adjudication Date'])
             else:
-                # Print placeholder right to pick up from next time
-                with open('next_right', 'w') as f:
-                    f.write(str(index) + ' ' + row['Priority Admin No'])
                 break
     '''Divide tasks to be executed by each core'''
     # determine the size of each sub-task
