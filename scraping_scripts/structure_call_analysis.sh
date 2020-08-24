@@ -8,5 +8,5 @@
 
 module load python/3.6.9
 source /home/fs02/pmr82_0001/ah986/envs/shortage_network/bin/activate
-mpirun -n 5 python3 submit_requests_parallel.py
+mpirun -n 5 python3 /scratch/ah986/Shortages_network/scraping_scripts/submit_requests_parallel.py
 
