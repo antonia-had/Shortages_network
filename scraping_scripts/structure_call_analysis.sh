@@ -1,4 +1,4 @@
-#!/bin/bash -i
+#!/bin/bash
 #SBATCH --job-name="CDSS_requests"
 #SBATCH --output="requests.out"
 #SBATCH --nodes=1
