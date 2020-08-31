@@ -1,437 +1,426 @@
-Process 0 has to retrieve rights: ['48029', '48027', '47921', '47888', '47884', '47879', '47869', '47847.47786', '47847.47784', '47847.47634', '47847.47389', '47847.47389', '47847.47389', '47847.47389', '47847.47389']
-Process 1 has to retrieve rights: ['47847.47359', '47847.47359', '47847.47359', '47847.47116', '47847.47116', '47847.46842', '47847.46842', '47847.46783', '47847.46386', '47847.46386', '47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.45595']
-Process 2 has to retrieve rights: ['47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.45595', '47847.42976', '47847.42976', '47847.42368', '47847.42368', '47847.42368', '47847.42003']
-Process 3 has to retrieve rights: ['47847.42003', '47847.40907', '47847.40907', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.38715', '47847.36676', '47847.36676']
-Process 4 has to retrieve rights: ['47847.32872', '47847.3141', '47847.3141', '47847.3141', '47847.3141', '47847.29584', '47827', '47827', '47796', '47755', '47671', '47671', '47671', '47670']
+Process 0 has to retrieve rights: ['47660', '47660', '47650', '47609', '47609', '47602', '47601', '47572', '47558', '47558', '47558', '47558', '47558', '47558']
+Process 1 has to retrieve rights: ['47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47558', '47504']
+Process 2 has to retrieve rights: ['47481.46785', '47481.46629', '47481.46538', '47481.46173', '47481.26297', '47481.14857', '47481.14857', '47478', '47476', '47476', '47476', '47476', '47474', '47474']
+Process 3 has to retrieve rights: ['47474', '47474', '47474', '47474', '47450', '47389', '47274', '47254', '47254', '47254', '47254', '47254', '47254', '47147']
+Process 4 has to retrieve rights: ['47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46933', '47116.46917', '47116.46872', '47116.46599', '47116.46571']
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=48029&wdid=7203935&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.46785&wdid=3803821&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '48029.csv'
+Data successfully received and written to file '47481.46785.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47359&wdid=4503667&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3802010&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47359.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42003&wdid=4503596&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3802011&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42003.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803566&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.46629&wdid=3803775&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47481.46629.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.32872&wdid=3703684&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47660&wdid=4503590&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.32872.csv'
+Data successfully received and written to file '47660.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47359&wdid=4503668&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804445&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47359.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804214&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803761&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.40907&wdid=4503676&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.46538&wdid=3703630&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.40907.csv'
+Data successfully received and written to file '47481.46538.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.3141&wdid=4503699&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47660&wdid=4503591&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.3141.csv'
+Data successfully received and written to file '47660.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47359&wdid=4503670&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804446&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47359.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=48027&wdid=3803871&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803762&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '48027.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.40907&wdid=4503677&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603609&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
-Processing results page 1 of 1.
-Data successfully received and written to file '47847.40907.csv'
-
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804215&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-Creating csv output format.
-Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
-
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.3141&wdid=4503700&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-Creating csv output format.
-Processing results page 1 of 1.
-Data successfully received and written to file '47847.3141.csv'
-
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503630&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-Creating csv output format.
-Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
-
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47116&wdid=3803789&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803763&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47116.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804217&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.46173&wdid=5300704&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47481.46173.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503631&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47650&wdid=3903513&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47650.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.3141&wdid=4503701&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804447&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.3141.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503632&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803764&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804225&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.26297&wdid=4503605&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47481.26297.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47116&wdid=3803790&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.14857&wdid=3803746&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47116.csv'
+Data successfully received and written to file '47481.14857.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.3141&wdid=4503702&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603610&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.3141.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503633&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47481.14857&wdid=3803776&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47481.14857.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804226&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803765&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.46842&wdid=7203937&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804448&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.46842.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47921&wdid=5103750&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47609&wdid=5302006&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47921.csv'
+Data successfully received and written to file '47609.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503634&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803767&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.46842&wdid=7203938&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47450&wdid=5103716&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.46842.csv'
+Data successfully received and written to file '47450.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804227&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603611&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503635&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47609&wdid=5302007&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47609.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.29584&wdid=3903996&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803768&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.29584.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503638&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47389&wdid=3903921&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47389.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.46783&wdid=7203941&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803769&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.46783.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3804228&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47274&wdid=3803815&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47274.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47888&wdid=3703751&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47478&wdid=3703616&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47888.csv'
+Data successfully received and written to file '47478.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.46386&wdid=4503599&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47602&wdid=5104700&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.46386.csv'
+Data successfully received and written to file '47602.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42976&wdid=3803802&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603612&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42976.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503639&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803770&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.46386&wdid=4503601&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47601&wdid=7204096&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.46386.csv'
+Data successfully received and written to file '47601.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42976&wdid=3803803&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47476&wdid=4503655&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42976.csv'
+Data successfully received and written to file '47476.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47827&wdid=5000768&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47572&wdid=3803766&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47827.csv'
+Data successfully received and written to file '47572.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42368&wdid=4503597&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803771&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42368.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803559&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102014&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.38715&wdid=4503640&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603613&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.38715.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47884&wdid=3703684&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3702002&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47884.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42368&wdid=4503598&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102016&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42368.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803560&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47476&wdid=4503725&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47476.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803561&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3803772&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.36676&wdid=7203942&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603614&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.36676.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47879&wdid=3803778&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3702012&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47879.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42368&wdid=4503602&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47476&wdid=4503726&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42368.csv'
+Data successfully received and written to file '47476.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803562&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3702041&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47869&wdid=3803713&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603615&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47869.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.42003&wdid=4503595&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102027&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.42003.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47827&wdid=5003624&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47504&wdid=3703718&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47827.csv'
+Data successfully received and written to file '47504.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.45595&wdid=3803565&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47476&wdid=4503727&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.45595.csv'
+Data successfully received and written to file '47476.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.36676&wdid=7203943&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603616&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.36676.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47786&wdid=4503600&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804443&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47786.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47796&wdid=3803776&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47474&wdid=3804444&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47796.csv'
+Data successfully received and written to file '47474.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47784&wdid=3803785&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102028&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47784.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47634&wdid=4503703&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3702059&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47634.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47389&wdid=4503662&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46933&wdid=3603617&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47389.csv'
+Data successfully received and written to file '47116.46933.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47755&wdid=5003646&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3802006&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47755.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47389&wdid=4503663&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46917&wdid=7203969&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47389.csv'
+Data successfully received and written to file '47116.46917.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47389&wdid=4503664&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102035&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47389.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47671&wdid=5102036&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46872&wdid=3803943&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47671.csv'
+Data successfully received and written to file '47116.46872.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47389&wdid=4503665&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47558&wdid=3802007&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47389.csv'
+Data successfully received and written to file '47558.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47671&wdid=5102037&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46599&wdid=7203953&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47671.csv'
+Data successfully received and written to file '47116.46599.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47847.47389&wdid=4503674&format=csv&pageIndex=1&startDate=12%2F31%2F81&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47116.46571&wdid=7204104&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47847.47389.csv'
+Data successfully received and written to file '47116.46571.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47671&wdid=5102038&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47254&wdid=5102039&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47671.csv'
+Data successfully received and written to file '47254.csv'
 
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47670&wdid=3603624&format=csv&pageIndex=1&startDate=12%2F31%2F80&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=47147&wdid=3802000&format=csv&pageIndex=1&startDate=12%2F31%2F79&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 Creating csv output format.
 Processing results page 1 of 1.
-Data successfully received and written to file '47670.csv'
+Data successfully received and written to file '47147.csv'
 
