@@ -4,20 +4,10 @@ Process 2 has to retrieve rights: ['26125.25505', '26125.25505', '25949.17783', 
 Process 3 has to retrieve rights: ['25924.24919', '25758.20697', '25394.22387', '25376.19283', '25375.19691']
 Process 4 has to retrieve rights: ['25375.19691', '25375.19691', '25375.19691', '25246.18949', '25246.18949']
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25375.19691&wdid=3703522&format=csv&pageIndex=1&startDate=11%2F10%2F19&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=28394.28365&wdid=3801762&format=csv&pageIndex=1&startDate=1%2F9%2F28&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
 Fetching data...
 Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26125.25505&wdid=5000693&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
@@ -33,8 +23,18 @@ Traceback (most recent call last):
   File "url_request.py", line 252, in process_csv
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=27960.23921&wdid=5000585&format=csv&pageIndex=1&startDate=7%2F22%2F26&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25375.19691&wdid=3703522&format=csv&pageIndex=1&startDate=11%2F10%2F19&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -53,6 +53,21 @@ Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisby
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
+Fetching data...
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=27960.23921&wdid=5000585&format=csv&pageIndex=1&startDate=7%2F22%2F26&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+
+    error: This URL is properly formatted, but returns zero records from CDSS.
+Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
 Traceback (most recent call last):
   File "url_request.py", line 450, in <module>
     main()
@@ -64,7 +79,7 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=28394.28365&wdid=3801762&format=csv&pageIndex=1&startDate=1%2F9%2F28&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26125.25505&wdid=5003631&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -79,7 +94,7 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26125.25505&wdid=5003631&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25758.20697&wdid=4500704&format=csv&pageIndex=1&startDate=11%2F26%2F20&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -113,21 +128,6 @@ Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisby
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25758.20697&wdid=4500704&format=csv&pageIndex=1&startDate=11%2F26%2F20&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-
-    error: This URL is properly formatted, but returns zero records from CDSS.
-Creating csv output format.
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
 Traceback (most recent call last):
   File "url_request.py", line 450, in <module>
     main()
@@ -154,7 +154,37 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25949.17783&wdid=3803722&format=csv&pageIndex=1&startDate=2%2F15%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+
+    error: This URL is properly formatted, but returns zero records from CDSS.
+Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
+Fetching data...
 Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25394.22387&wdid=5103646&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+
+    error: This URL is properly formatted, but returns zero records from CDSS.
+Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
+Fetching data...
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26614.25902&wdid=3700590&format=csv&pageIndex=1&startDate=10%2F30%2F23&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -199,22 +229,7 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25949.17783&wdid=3803722&format=csv&pageIndex=1&startDate=2%2F15%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-
-    error: This URL is properly formatted, but returns zero records from CDSS.
-Creating csv output format.
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26614.25902&wdid=3700590&format=csv&pageIndex=1&startDate=10%2F30%2F23&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25376.19283&wdid=5303962&format=csv&pageIndex=1&startDate=11%2F15%2F20&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -244,7 +259,7 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25376.19283&wdid=5303962&format=csv&pageIndex=1&startDate=11%2F15%2F20&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25942.2024&wdid=3803741&format=csv&pageIndex=1&startDate=1%2F17%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -289,7 +304,22 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25942.2024&wdid=3803741&format=csv&pageIndex=1&startDate=1%2F17%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26429&wdid=5100788&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+
+    error: This URL is properly formatted, but returns zero records from CDSS.
+Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
+Fetching data...
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25375.19691&wdid=3700927&format=csv&pageIndex=1&startDate=11%2F10%2F19&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -319,52 +349,22 @@ Traceback (most recent call last):
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=26429&wdid=5100788&format=csv&pageIndex=1&startDate=8%2F5%2F22&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25942.19967&wdid=3803740&format=csv&pageIndex=1&startDate=1%2F17%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
 Fetching data...
 Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=28394.2611&wdid=3804613&format=csv&pageIndex=1&startDate=1%2F9%2F28&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-
-    error: This URL is properly formatted, but returns zero records from CDSS.
-Creating csv output format.
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25375.19691&wdid=3700927&format=csv&pageIndex=1&startDate=11%2F10%2F19&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
-
-    error: This URL is properly formatted, but returns zero records from CDSS.
-Creating csv output format.
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
-Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25942.19967&wdid=3803740&format=csv&pageIndex=1&startDate=1%2F17%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -383,8 +383,18 @@ Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisby
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
+Traceback (most recent call last):
+  File "url_request.py", line 450, in <module>
+    main()
+  File "url_request.py", line 442, in main
+    run_batch(app_data)
+  File "url_request.py", line 351, in run_batch
+    process_csv(app_data, first_page, response.text)
+  File "url_request.py", line 252, in process_csv
+    page_count = int(lines[1].split(',')[1])
+IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=28394.22461&wdid=3800805&format=csv&pageIndex=1&startDate=1%2F9%2F28&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25924.24919&wdid=3604923&format=csv&pageIndex=1&startDate=11%2F26%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
@@ -398,18 +408,8 @@ Traceback (most recent call last):
   File "url_request.py", line 252, in process_csv
     page_count = int(lines[1].split(',')[1])
 IndexError: list index out of range
-Traceback (most recent call last):
-  File "url_request.py", line 450, in <module>
-    main()
-  File "url_request.py", line 442, in main
-    run_batch(app_data)
-  File "url_request.py", line 351, in run_batch
-    process_csv(app_data, first_page, response.text)
-  File "url_request.py", line 252, in process_csv
-    page_count = int(lines[1].split(',')[1])
-IndexError: list index out of range
 Fetching data...
-Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=25924.24919&wdid=3604923&format=csv&pageIndex=1&startDate=11%2F26%2F21&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
+Request: https://dwr.state.co.us/Rest/GET/api/v2/analysisservices/callanalysisbywdid/?adminNo=28394.22461&wdid=3800805&format=csv&pageIndex=1&startDate=1%2F9%2F28&endDate=09%2F30%2F2019&apiKey=dBTnllEokTHF4%2BNOiEopD0e3MDFLP7vH
 
     error: This URL is properly formatted, but returns zero records from CDSS.
 Creating csv output format.
