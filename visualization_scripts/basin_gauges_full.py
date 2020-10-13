@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 14 16:27:39 2020
+Created on Mon October 12 2020
 
-@author: Antonia Hadjimichael
+@author: Ananya Gangadhar
+Adapted from Antonia's basin_model_representation.py
 """
 import pandas as pd
 import cartopy.io.img_tiles as cimgt
@@ -16,6 +17,9 @@ import cartopy.crs as ccrs
 # StateMod diversion locations
 structures = pd.read_csv('../data/modeled_diversions.csv',index_col=0)
 
+# Important streamflow gauge locations
+gauges = pd.read_csv('../data/basin_gauges.csv', index_col=1, header=2)
+
 '''
 Map setup
 '''
@@ -25,7 +29,7 @@ extent = [-109.125,-105.625,38.875,40.50]
 # background map tiles
 tiles = cimgt.Stamen('terrain-background')
 # MosartWM gridcells
-xlist = np.linspace(-109.125,-105.625, 29) 
+xlist = np.linspace(-109.125,-105.625, 29)
 ylist = np.linspace(38.875, 40.50, 17)
 X, Y = np.meshgrid(xlist, ylist)
 Xgrid = np.arange(128, 156)
@@ -43,6 +47,7 @@ Figure generation
 '''
 mosart_clr='#D62828'
 statemod_clr='#003049'
+gauge_clr = '#D62728'
 
 fig = plt.figure(figsize=(18, 12))
 ax = plt.axes(projection=tiles.crs)
@@ -53,11 +58,13 @@ ax.add_image(tiles,9)
 # Draw basin
 ax.add_feature(shape_feature, facecolor='#a1a384', alpha = 0.6)
 # Draw streams
-ax.add_feature(flow_feature, alpha = 0.8, linewidth=1.5, zorder=4) 
-# Draw grid  
+ax.add_feature(flow_feature, alpha = 0.8, linewidth=1.5, zorder=4)
+# Draw grid
 ax.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.5, linewidth=0.5, transform=ccrs.PlateCarree())
 # Draw StateMod nodes
-ax.scatter(structures['X'], structures['Y'], marker = '.', s = 200,
+stru = ax.scatter(structures['X'], structures['Y'], marker = '.', s = 200,
            c =statemod_clr, transform=ccrs.PlateCarree(),zorder=5)
-
-plt.savefig('basin_model_rep.png')
+gaug = ax.scatter(gauges['longitude'], gauges['latitude'], marker = '.', s = 200, c = gauge_clr,
+           transform=ccrs.PlateCarree(),zorder=5)
+ax.legend((stru, gaug),('Diversion Structures', 'All Division 5 Gauges'))
+plt.savefig('basin_gauges_full.png')
