@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon October 12 2020
+Created on Mon October 19 2020
 
 @author: Ananya Gangadhar
 Adapted from Antonia's basin_model_representation.py
@@ -17,8 +17,10 @@ import cartopy.crs as ccrs
 # StateMod diversion locations
 structures = pd.read_csv('../data/modeled_diversions.csv',index_col=0)
 
-# Important streamflow gauge locations
-gauges = pd.read_csv('../data/basin_gauges.csv', index_col=1, header=2)
+
+# Streamflow gauge locations in division 5
+gauges = pd.read_csv('../data/div5_gauges.csv', index_col=0, header=2)
+
 
 '''
 Map setup
@@ -66,5 +68,5 @@ stru = ax.scatter(structures['X'], structures['Y'], marker = '.', s = 200,
            c =statemod_clr, transform=ccrs.PlateCarree(),zorder=5)
 gaug = ax.scatter(gauges['longitude'], gauges['latitude'], marker = '.', s = 200, c = gauge_clr,
            transform=ccrs.PlateCarree(),zorder=5)
-ax.legend((stru, gaug),('Diversion Structures', 'All UCRB Gauges'))
-plt.savefig('basin_gauges_full.png')
+ax.legend((stru, gaug),('Diversion Structures', 'All Division 5 Gauges'))
+plt.savefig('basin_gauges_relevant.png')
