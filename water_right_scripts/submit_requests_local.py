@@ -4,7 +4,7 @@ import pandas as pd
 '''Identify rights to request so limit is not exceeded'''
 # get list of rights already downloaded
 fetched_dir = os.listdir('./fetched_data')
-fetched_admins = [x[:-4] for x in fetched_dir]
+fetched_admins = [x[:-4] for x in fetched_dir] #gets rid of ".csv" from filename
 rights = pd.read_csv('../data/CDSS_WaterRights.csv', dtype='str')
 #Flip table so local user starts going through rights the other way
 rights=rights.reindex(index=rights.index[::-1])
