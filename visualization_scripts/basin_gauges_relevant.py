@@ -21,6 +21,9 @@ structures = pd.read_csv('../data/modeled_diversions.csv',index_col=0)
 # Streamflow gauge locations in division 5
 gauges = pd.read_csv('../data/div5_gauges.csv', index_col=0, header=2)
 
+# Climate stations in division 5
+climate = pd.read_csv("../data/CDSS_climate_stations.csv", header=0)
+
 
 '''
 Map setup
@@ -50,6 +53,7 @@ Figure generation
 mosart_clr='#D62828'
 statemod_clr='#003049'
 gauge_clr = '#D62728'
+climate_clr = '#FFFF00'
 
 fig = plt.figure(figsize=(18, 12))
 ax = plt.axes(projection=tiles.crs)
@@ -68,5 +72,7 @@ stru = ax.scatter(structures['X'], structures['Y'], marker = '.', s = 200,
            c =statemod_clr, transform=ccrs.PlateCarree(),zorder=5)
 gaug = ax.scatter(gauges['longitude'], gauges['latitude'], marker = '.', s = 200, c = gauge_clr,
            transform=ccrs.PlateCarree(),zorder=5)
-ax.legend((stru, gaug),('Diversion Structures', 'All Division 5 Gauges'))
-plt.savefig('basin_gauges_relevant.png')
+clim = ax.scatter(climate['longitude'], climate['latitude'], marker = '.', s = 200, c = climate_clr,
+                  transform=ccrs.PlateCarree(),zorder=5)
+ax.legend((stru, gaug, clim),('Diversion Structures', 'All Div 5 Streamflow Gauges', 'All Div 5 Climate Stations'))
+plt.savefig('basin_stations_relevant.png')
