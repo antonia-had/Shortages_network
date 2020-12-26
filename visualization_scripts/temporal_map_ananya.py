@@ -55,6 +55,7 @@ legend = ax.legend([l2, l4], labels, ncol=2, loc = 'upper left', title = 'Year: 
 #update points through time
 def update_points(num, gauge_points, station_points, legend):
     # structure_points.set_sizes(structures_life[str(num)] / 10)
+    num *= 2
     gauge_points.set_sizes(gauges_life[str(num)] * 100)
     station_points.set_sizes(stations_life[str(num)] * 100)
 
@@ -71,6 +72,6 @@ def update_points(num, gauge_points, station_points, legend):
     return gauge_points, station_points, legend
 
 
-anim = animation.FuncAnimation(fig, update_points, 127, fargs=(gauge_points, station_points, legend), interval=200, blit=False)
+anim = animation.FuncAnimation(fig, update_points, 63, fargs=(gauge_points, station_points, legend), interval=200, blit=False)
 anim.save('basin_animation_yrs.gif', fps=10, dpi=150, writer="Pillow")
 

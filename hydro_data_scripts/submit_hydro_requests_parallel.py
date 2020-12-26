@@ -38,18 +38,15 @@ if rank == 0:
 
     # converts data into a list of arrays
     gauges_to_request = [gauges_to_request[starts[p]:ends[p]] for p in range(size)]
-    #wdids = [wdids[starts[p]:ends[p]] for p in range(size)]
-    #dates = [dates[starts[p]:ends[p]] for p in range(size)]
+
 
 else:
     gauges_to_request = None
-    # wdids = None
-    # dates = None
+
 
 '''Scatter tasks from master to every core'''
 gauges_to_request = comm.scatter(gauges_to_request, root=0)
-# wdids = comm.scatter(wdids, root=0)
-# dates = comm.scatter(dates, root=0)
+
 
 '''Every core goes through its assigned tasks'''
 print('Process {} has to retrieve rights:'.format(rank), gauges_to_request)
