@@ -1,0 +1,4 @@
+PageNumber,PageCount,ResultCount,ResultDateTime
+1,1,1,2021-01-27T10:57:44.5108543-07:00
+stationNum,siteId,measType,measDate,value,flagA,flagB,flagC,flagD,dataSource,modified,measUnit
+3998,USW00093073,Snow,2015-06-09T00:00:00.0000000-06:00,0.000000,,,W,,NOAA,2015-06-14T06:34:04.0300000-06:00,in

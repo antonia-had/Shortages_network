@@ -6,8 +6,8 @@ import math
 from csv import writer
 
 # make a list of different kinds of climate gauges for which data is available
-gauge_types = ["Evap", "FrostDate", "MaxTemp", "MinTemp", "MeanTemp", "Precip", "Snow", "SnowDepth", \
-               "SnowSWE", "Solar", "VP", "Wind"]
+gauge_types = ["Evap", "FrostDate", "MaxTemp", "MinTemp", "MeanTemp", "Precip", "Snow", "SnowDepth", "SnowSWE",
+               "Solar", "VP", "Wind"]
 
 #code collects data for each gauge type  and stores data in the respective directory
 total_lines = 0
@@ -16,7 +16,7 @@ for type in gauge_types:
     # get list of gauges already downloaded
     fetched_dir = os.listdir('./fetched_climate_data/' + type)
     fetched_gauges = [x[:-4] for x in fetched_dir]  # gets rid of ".csv" from filename
-    gauges = pd.read_csv('../data/CDSS_climate_stations_test.csv', dtype='str')  # test dataset
+    gauges = pd.read_csv('../data/CDSS_climate_stations.csv', dtype='str')  # test dataset
     gauges = gauges.loc[gauges["measType"] == type]  #dataset with one type of climate stations
 
     # Flip table so local user starts going through rights the other way

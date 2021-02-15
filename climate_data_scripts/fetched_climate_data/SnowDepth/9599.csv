@@ -1,0 +1,4 @@
+PageNumber,PageCount,ResultCount,ResultDateTime
+1,1,1,2021-01-28T13:20:51.6463183-07:00
+stationNum,siteId,measType,measDate,value,flagA,flagB,flagC,flagD,dataSource,modified,measUnit
+9599,US1COGR0077,SnowDepth,2020-04-16T00:00:00.0000000-06:00,4.000000,,,,,NOAA,2020-12-15T22:34:12.9770000-07:00,in

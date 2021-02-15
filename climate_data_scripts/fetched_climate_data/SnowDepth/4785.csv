@@ -1,0 +1,5 @@
+PageNumber,PageCount,ResultCount,ResultDateTime
+1,1,2,2021-01-28T13:21:47.3327724-07:00
+stationNum,siteId,measType,measDate,value,flagA,flagB,flagC,flagD,dataSource,modified,measUnit
+4785,US1COGF0045,SnowDepth,2017-11-17T00:00:00.0000000-07:00,0.000000,,,,,NOAA,2019-08-13T15:25:29.9700000-06:00,in
+4785,US1COGF0045,SnowDepth,2018-01-16T00:00:00.0000000-07:00,0.000000,,,,,NOAA,2019-08-13T15:25:30.7670000-06:00,in
