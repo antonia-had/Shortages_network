@@ -6,6 +6,7 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 size = comm.Get_size()
 
+
 '''Master to determine number of tasks for the day and divide among cores'''
 if rank == 0:
     '''Identify rights to request so limit is not exceeded'''

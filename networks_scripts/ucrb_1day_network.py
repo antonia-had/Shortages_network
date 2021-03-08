@@ -13,9 +13,6 @@ def day_water_rights(date = '2002-09-09'):
     # returns .csv file showing all calls for a particular day
     # format date as YYYY-MM-DD string
 
-    # import os
-    # import pandas as pd
-    # import csv
 
     date += 'T00:00:00.0000000'
     path = '../water_right_scripts/fetched_data'
@@ -41,17 +38,18 @@ def day_water_rights(date = '2002-09-09'):
         write = csv.writer(f)
         write.writerow(col_names)
         write.writerows(rows)
+    os.rename(date[:10] + '.csv', 'daily_data/'+date[:10] + '.csv')
 
-        return
-######################################
+    return
+###############################################################################################
 
 # call function
-date = '2002-04-18'
-# day_water_rights(date)
+date = '2002-04-17'
+day_water_rights(date)
 
 # make a list of graph edges as tuple pairs
 
-rights_data = pd.read_csv(date + '.csv')
+rights_data = pd.read_csv('daily_data/' + date + '.csv')
 # select only those rights that were put out of priority on that day
 rights_data = rights_data.loc[rights_data['analysisOutOfPriorityPercentOfDay'] > 0]
 edges = rights_data[['analysisWdid', 'locationWdid']]
@@ -85,10 +83,10 @@ for n in nodes:
 sizes = nx.get_node_attributes(G, "size")
 
 
-###################
+###############################################################################################
 
-degree_sequence = sorted([d for n, d in G.degree()], reverse=True)
-dmax = max(degree_sequence)
+# degree_sequence = sorted([d for n, d in G.degree()], reverse=True)
+# dmax = max(degree_sequence)
 
 fig = plt.figure("Degree of graph", figsize=(8, 8))
 # Create a gridspec for adding subplots of different sizes
@@ -100,7 +98,7 @@ ax0 = fig.add_subplot(axgrid[0:3, :])
 # Plot only the top 10% of users based on allocation amount
 new_nodes = sorted(G.nodes(data=True), key=lambda x: x[1]['size'], reverse=True)
 
-n = int(math.ceil(len(new_nodes)/1))
+n = int(math.ceil(len(new_nodes)/10))
 new_nodes = new_nodes[:n]
 new_nodes = [node[0] for node in new_nodes]
 # make sure the central nodes are included in this list
@@ -113,6 +111,9 @@ print(new_nodes)
 Gcc = G.subgraph(new_nodes)
 sizes = nx.get_node_attributes(Gcc, "size")
 print(sizes)
+
+degree_sequence = sorted([d for n, d in Gcc.degree()], reverse=True)
+dmax = max(degree_sequence)
 
 pos = nx.spring_layout(Gcc, seed=1039651)
 # set node size
