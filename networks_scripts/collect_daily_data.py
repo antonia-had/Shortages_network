@@ -28,7 +28,7 @@ def day_water_rights(date = '2002-09-09'):
 
 # create list of all date strings in YYYY-MM-DD format
 # dates = pd.date_range(start="2000-01-01", end="2020-10-31")
-dates = pd.date_range(start="2000-01-01", end="2000-12-31")
+dates = pd.date_range(start="2004-11-09", end="2020-10-31")
 dates = [i.strftime('%Y-%m-%d') for i in dates]
 print(dates)
 
