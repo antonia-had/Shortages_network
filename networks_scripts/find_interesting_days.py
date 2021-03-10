@@ -139,32 +139,3 @@ print(df.head)
 
 df.to_csv('../data/network_properties.csv', index = False)
 
-# year = '2000'
-# G = make_year_network(year)
-# # print(G.nodes())
-# print(G.node[5103660]['latitude'], G.node[5103660]['longitude'], G.node[5103660]['netAbs'])
-# props = measure_network_props(G)
-# print(props.keys())
-#
-# stats = []
-#
-# for prop, v in props.items():
-#     # print(v)
-#     d = {'prop': '', '1st_q': 0, 'median': 0, '3rd_q': 0, 'max': 0, 'min': 0, 'mean': 0}
-#     vl = list(v.values())
-#     vl = sorted(vl)
-#     # print(vl)
-#     d['year'] = year
-#     d['prop'] = prop
-#
-#     if vl:
-#         # exclude empty lists
-#         # print(vl)
-#         d['1st_q'] = np.percentile(vl, 25)
-#         d['median'] = np.percentile(vl, 50)
-#         d['2nd_q'] = np.percentile(vl, 75)
-#         d['max'] = max(vl)
-#         d['min'] = min(vl)
-#         d['mean'] = np.mean(vl)
-#     stats += [d]
-
