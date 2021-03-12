@@ -107,6 +107,7 @@ def measure_network_props(G):
 path = 'yearly_networks/'
 years_list = os.listdir(path)
 years_list.remove('.DS_Store')
+# years_list = ['network_2008.csv']
 
 stats = []
 for year in years_list:

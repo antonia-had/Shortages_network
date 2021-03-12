@@ -1,51 +1,25 @@
-# import os
-# import pandas as pd
-# import csv
-# import numpy as np
-# import math
-#
-# # loop through all years
-# path = 'yearly_data/'
-# years = os.listdir(path)
-#
-# years = ['2000.csv']
-#
-# for year in years:
-#     df = pd.read_csv(path + year, dtype=object, error_bad_lines=False)
-#     print(df.columns)
-#     df = df.drop(['Unnamed: 0'], axis = 1)
-#     print(df.columns)
-#     df.columns = [str(x) for x in df.columns]
-#     print(df.columns)
-#
-#
-#
-#
-#
-#
-# #
-# # # obtain volume of water used by each user/node
-# # water_rights = pd.read_csv('../data/CDSS_WaterRights.csv', dtype=object, error_bad_lines=False)
-# # all_vol = water_rights[['WDID', 'Net Absolute']]
-# #
-# # for year in years:
-# #     df = pd.read_csv(path + year, dtype=object, error_bad_lines=False)
-# #     print(df.columns)
-# #     wdids = df.loc[['analysisWdid']]
-# #     print(wdids)
-# #     vols = []
-# #     for wdid in wdids:
-# #         vol = all_vol.loc[all_vol['WDID'] == wdid]
-# #
-# #         print(vol)
-#
-#
-#
-#
-#
-#
-#
+import os
+import pandas as pd
+import csv
+import numpy as np
+import math
 #
 
-x = [1,2,2, 3, 7, 9, 1, 0]
-print(sorted(x))
+#
+# d1 = {'A': 1, 'B': 2, 'C': 3}
+# d2 = {'A': 1, 'B': 2, 'C': 3}
+#
+# ds = [d1, d2]
+# d = {}
+# for k in d1.iterkeys():
+#     d[k] = tuple(d[k] for d in ds)
+#
+# print(d)
+
+
+a = [('A', 1), ('B', 2), ('C', 3), ('D', 4), ('E', 5)]
+
+factor = int(math.ceil(0.4*len(a)))
+print(factor)
+top = sorted(a, key = lambda x: x[1], reverse = True)[:factor]
+print(top)
