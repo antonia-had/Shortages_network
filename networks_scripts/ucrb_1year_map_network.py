@@ -9,6 +9,8 @@ from cartopy.feature import ShapelyFeature
 import cartopy.crs as ccrs
 import cartopy.io.img_tiles as cimgt
 import cartopy.feature as cfeature
+import seaborn as sns
+from matplotlib.colors import ListedColormap
 
 ################################################################################################################
 '''Function that creates a network with edge and node attributes for a given year'''
@@ -69,7 +71,7 @@ def plot_network_graph(G, year):
                                    ccrs.PlateCarree(), edgecolor='black', facecolor='None')
     # Stream lines
     flow_feature = ShapelyFeature(Reader('../data/UCRBstreams.shp').geometries(),
-                                  ccrs.PlateCarree(), edgecolor='royalblue', facecolor='None')
+                                  ccrs.PlateCarree(), edgecolor='royalblue', facecolor='None', alpha=0.5)
 
     # 1. SUBPLOT OF NETWORK MAP
     # the first subplot will span 6 rows and 4 columns, top left
@@ -85,7 +87,7 @@ def plot_network_graph(G, year):
     # Draw streams
     ax0.add_feature(flow_feature, alpha=0.7, linewidth=1.5, zorder=10)
     # Draw grid
-    ax0.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.1, linewidth=0.5, transform=ccrs.PlateCarree())
+    # ax0.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.1, linewidth=0.5, transform=ccrs.PlateCarree())
 
 
 
@@ -108,28 +110,38 @@ def plot_network_graph(G, year):
     top_nodes_list = [n for n,d in top_nodes]
     Gcc = G.subgraph(top_nodes_list)
 
-    # Add labels only for important users (nodes with degree >= 100)
-    labels = {iata: name if nx.degree(Gcc)[iata] >= 100 else '' for iata, name in list(nx.get_node_attributes(Gcc, 'name').items())}
 
-    # Color nodes by net absolute volume (in cfs) allocation
+    # Color nodes by degree
+    # my_cmap = ListedColormap(sns.color_palette("ch:start=.2,rot=-.3"))
+    degs = Gcc.degree() # Dict with Node ID, Degree
+    nod = Gcc.nodes()
+    color = np.asarray([np.log10(degs[n]) for n in nod])
+    # print(sorted(color, reverse=True))
+
+    # Size nodes by net absolute volume
     net_abs = nx.get_node_attributes(Gcc, 'netAbs')
-    color = [np.log10(net_abs[i]) for i in Gcc.nodes]
-    print(sorted(color, reverse=True))
-
-    # Size nodes by net absolute volume also
     sizes = [net_abs[i]/10 for i in Gcc.nodes]
     # sizes = [np.ceil(c + 5)*50 for c in color]
 
-    nx.draw_networkx(Gcc, ax = ax0, pos=pos, edge_color='black', alpha=0.8, arrows=False,
-                     with_labels=True, node_color = color, cmap=plt.cm.Reds,
-                     node_size=sizes, labels=labels, width = 0.1)
+    # Add labels only for important users (nodes with degree >= 50 or with 99th percentile volumes)
+
+    cutoff_vol = np.percentile(list(net_abs.values()), 99)
+    labels = {i: name if (nx.degree(Gcc)[i] >= 50 or net_abs[i] >= cutoff_vol) else '' for i, name in
+                    list(nx.get_node_attributes(Gcc, 'name').items())}
+
+    nx.draw_networkx(Gcc, ax = ax0, pos=pos, edge_color='black', alpha=0.7, arrows=False,
+                     with_labels=True, node_color = color, cmap=plt.cm.coolwarm,
+                     node_size=sizes, labels=labels, width = 0.1, font_size=9, font_weight='bold')
+    sm = plt.cm.ScalarMappable(cmap=plt.cm.coolwarm, norm=plt.Normalize(vmin=10**(min(color)), vmax=10**(max(color))))
+    sm._A = []
+    plt.colorbar(sm, ax=ax0, orientation='horizontal', label='Degree')
 
 
     # 2. SUBPLOT OF MEAN ANNUAL FLOWS
     # the second subplot will span 2 rows and 4 columns, bottom left
     ax1 = fig.add_subplot(gspec[4:, :6])
     flows = pd.read_csv('../data/UCRB_mean_annual_flows.csv')
-    ax1.plot(flows['year_nu'], flows['mean_va'], marker='o')
+    ax1.plot(flows['year_nu'], flows['mean_va'], 'bo-')
     ax1.set_xlabel('Year')
     ax1.set_ylabel('Mean stream flow (cfs)')
     ax1.set_title("Mean annual flows for river basin")
@@ -143,11 +155,11 @@ def plot_network_graph(G, year):
     connectivity_values = [n[1] for n in connectivity]
     centrality = nx.betweenness_centrality(G).values()
     ax2.plot(centrality, connectivity_values, 'ro', alpha=0.3)
-    ax2.set_xlabel('Node centrality')
-    ax2.set_ylabel('Node connectivity')
+    ax2.set_xlabel('Node betweenness centrality')
+    ax2.set_ylabel('Node connectivity (Degree)')
     ax2.set_title('Connectivity vs. centrality of nodes')
     ax2.set_ylim([-50,1800])
-    ax2.set_xlim([-0.0005, 0.01])
+    ax2.set_xlim([-0.0001, 0.0004])
     ax2.ticklabel_format(scilimits=(0,4))
 
     # 4. SUBPLOT OF # NODES VS. DEGREE FOR INS & OUTS
@@ -177,7 +189,9 @@ def plot_network_graph(G, year):
 
 
     plt.tight_layout(pad=5)
+    # plt.colorbar(plt.cm.coolwarm, ax=ax0, orientation='horizontal')
     plt.savefig('yearly_networks_plots/' + year + '_25percent' + '.png', dpi=300)
+
 
 
     return

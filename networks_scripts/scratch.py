@@ -17,9 +17,6 @@ import math
 # print(d)
 
 
-a = [('A', 1), ('B', 2), ('C', 3), ('D', 4), ('E', 5)]
+a = dict([('A', 1), ('B', 2), ('C', 3), ('D', 4), ('E', 5)])
 
-factor = int(math.ceil(0.4*len(a)))
-print(factor)
-top = sorted(a, key = lambda x: x[1], reverse = True)[:factor]
-print(top)
+print(list(a.values()))

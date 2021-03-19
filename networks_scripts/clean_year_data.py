@@ -63,7 +63,7 @@ import networkx as nx
 
 ######################################################################################################################
 
-# '''Create .csv file with network node attributes'''
+'''Create .csv file with network node attributes'''
 #
 # df = pd.read_csv('../data/DWR_REST_WaterRights.csv')
 # print(df.head())
