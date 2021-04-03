@@ -71,7 +71,7 @@ def plot_network_graph(G, year):
                                    ccrs.PlateCarree(), edgecolor='black', facecolor='None')
     # Stream lines
     flow_feature = ShapelyFeature(Reader('../data/UCRBstreams.shp').geometries(),
-                                  ccrs.PlateCarree(), edgecolor='royalblue', facecolor='None', alpha=0.5)
+                                  ccrs.PlateCarree(), edgecolor='royalblue', facecolor='None', alpha=0.5, zorder=1)
 
     # 1. SUBPLOT OF NETWORK MAP
     # the first subplot will span 6 rows and 4 columns, top left
@@ -85,7 +85,7 @@ def plot_network_graph(G, year):
     # Draw basin
     ax0.add_feature(shape_feature, facecolor='#a1a384', alpha=0.5)
     # Draw streams
-    ax0.add_feature(flow_feature, alpha=0.7, linewidth=1.5, zorder=10)
+    ax0.add_feature(flow_feature, alpha=0.7, linewidth=1.5, zorder=1)
     # Draw grid
     # ax0.pcolor(X, Y, Z, facecolor='none', edgecolor='grey', alpha=0.1, linewidth=0.5, transform=ccrs.PlateCarree())
 
@@ -103,38 +103,54 @@ def plot_network_graph(G, year):
 
     ax0.set_title("Connected components of network")
 
-    # Select only top 25% of nodes based on degree
+    # Select only top 100% of nodes based on degree
     degree = G.degree()
-    N = int(math.ceil(0.25 * len(degree)))
+    N = int(math.ceil(1.00 * len(degree)))
     top_nodes = sorted(degree, key = lambda x: x[1], reverse = True)[:N]
     top_nodes_list = [n for n,d in top_nodes]
     Gcc = G.subgraph(top_nodes_list)
 
 
-    # Color nodes by degree
+    # Color nodes by out degree
     # my_cmap = ListedColormap(sns.color_palette("ch:start=.2,rot=-.3"))
-    degs = Gcc.degree() # Dict with Node ID, Degree
+    degs = Gcc.out_degree() # Dict with Node ID, Degree
     nod = Gcc.nodes()
-    color = np.asarray([np.log10(degs[n]) for n in nod])
+    color = np.asarray([degs[n] for n in nod])
     # print(sorted(color, reverse=True))
 
-    # Size nodes by net absolute volume
+    # Size nodes by net absolute volume log-scaled
     net_abs = nx.get_node_attributes(Gcc, 'netAbs')
-    sizes = [net_abs[i]/10 for i in Gcc.nodes]
-    # sizes = [np.ceil(c + 5)*50 for c in color]
+    log_net_abs = [np.log10(net_abs[i])*20 if net_abs[i] > 0 else 0 for i in Gcc.nodes ]
+    sizes = [np.log10(net_abs[i])*20 if net_abs[i] > 0 and Gcc.out_degree(i) > 0 else 0 for i in Gcc.nodes]
+    # set size of nodes with out_degree = 0 to 0
 
-    # Add labels only for important users (nodes with degree >= 50 or with 99th percentile volumes)
+    # # Size nodes by out-degree
+    # sizes = [(Gcc.out_degree(node)) for node in nod]
+    # print(sizes)
 
-    cutoff_vol = np.percentile(list(net_abs.values()), 99)
-    labels = {i: name if (nx.degree(Gcc)[i] >= 50 or net_abs[i] >= cutoff_vol) else '' for i, name in
-                    list(nx.get_node_attributes(Gcc, 'name').items())}
+    # # Add labels only for important users (nodes with degree >= 50 or with 99th percentile volumes)
+    #
+    # cutoff_vol = np.percentile(list(net_abs.values()), 99)
+    # labels = {i: name if (nx.degree(Gcc)[i] >= 50 or net_abs[i] >= cutoff_vol) else '' for i, name in
+    #                 list(nx.get_node_attributes(Gcc, 'name').items())}
 
-    nx.draw_networkx(Gcc, ax = ax0, pos=pos, edge_color='black', alpha=0.7, arrows=False,
-                     with_labels=True, node_color = color, cmap=plt.cm.coolwarm,
-                     node_size=sizes, labels=labels, width = 0.1, font_size=9, font_weight='bold')
-    sm = plt.cm.ScalarMappable(cmap=plt.cm.coolwarm, norm=plt.Normalize(vmin=10**(min(color)), vmax=10**(max(color))))
+    # Add labels only for important users (nodes with out_degree > 20)
+
+    labels = {i: name for i, name in list(nx.get_node_attributes(Gcc, 'name').items()) if degs[i] >= 20}
+
+    # Add nodes with out_degree = 0 colored in white
+    sizes2 = [0 if (Gcc.out_degree(node)) > 0 else np.log10(net_abs[node])*20 for node in nod]
+    nx.draw_networkx_nodes(Gcc, ax = ax0, pos=pos,node_color='white',node_size=sizes2, zorder=40, alpha=0.6)
+
+    # Draw network
+    nx.draw_networkx(Gcc, ax = ax0, pos=pos, edge_color='black', alpha=0.9, arrows=False,
+                     with_labels=True, node_color = color, cmap=plt.cm.plasma, vmin=1, vmax=2000,
+                     node_size=sizes, labels=labels, width = 0.1, font_size=7, font_weight='bold', zorder=50)
+    sm = plt.cm.ScalarMappable(cmap=plt.cm.plasma, norm=plt.Normalize(vmin=1, vmax=2000))
     sm._A = []
-    plt.colorbar(sm, ax=ax0, orientation='horizontal', label='Degree')
+    plt.colorbar(sm, ax=ax0, orientation='horizontal', label='Out Degree')
+
+
 
 
     # 2. SUBPLOT OF MEAN ANNUAL FLOWS
@@ -159,7 +175,7 @@ def plot_network_graph(G, year):
     ax2.set_ylabel('Node connectivity (Degree)')
     ax2.set_title('Connectivity vs. centrality of nodes')
     ax2.set_ylim([-50,1800])
-    ax2.set_xlim([-0.0001, 0.0004])
+    ax2.set_xlim([-0.0001, 0.0014])
     ax2.ticklabel_format(scilimits=(0,4))
 
     # 4. SUBPLOT OF # NODES VS. DEGREE FOR INS & OUTS
@@ -190,7 +206,7 @@ def plot_network_graph(G, year):
 
     plt.tight_layout(pad=5)
     # plt.colorbar(plt.cm.coolwarm, ax=ax0, orientation='horizontal')
-    plt.savefig('yearly_networks_plots/' + year + '_25percent' + '.png', dpi=300)
+    plt.savefig( 'yearly_networks_plots/' + year + '_100percent' + '.png', dpi=300)
 
 
 

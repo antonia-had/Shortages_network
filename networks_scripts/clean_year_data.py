@@ -37,29 +37,30 @@ import networkx as nx
 
 '''Create .csv files with network edges and edge attributes'''
 
-# path = 'yearly_data_lite/'
-# years_list = os.listdir(path)
+path = 'yearly_data_lite/'
+years_list = os.listdir(path)
 # years_list.remove('.DS_Store')
-# # years_list = ['2008.csv']
-# print(years_list)
-# # years_list = years_list[1:2]
-#
-# for year in years_list:
-#     print(year)
-#     df = pd.read_csv(path + year)
-#     df = df.drop(['analysisDate', 'analysisStructureName', 'locationStructure',
-#                   'priorityWdid', 'priorityStructure'], 1)
-#     # print(df.columns)
-#     new_df = df.groupby(df.columns.tolist()).size().reset_index().rename(columns={0: 'count'})
-#     wtd_count = new_df['analysisOutOfPriorityPercentOfDay'] * new_df['count'] / 100
-#     new_df['wtd_count'] = list(wtd_count)
-#     # print(new_df)
-#     new_df['sum_wtd_count'] = new_df.groupby(['analysisWdid', 'locationWdid'])['wtd_count'].transform('sum')
-#     new_df = new_df.drop(['analysisOutOfPriorityPercentOfDay', 'count', 'wtd_count'], 1)
-#     new_df = new_df.drop_duplicates()
-#     # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
-#     print(new_df)
-#     new_df.to_csv('yearly_networks/network_' + year, index = False)
+# years_list = ['2008.csv']
+print(years_list)
+# years_list = years_list[1:2]
+
+for year in years_list:
+    print(year)
+    df = pd.read_csv(path + year)
+    df = df.drop(['analysisDate', 'analysisStructureName', 'locationStructure',
+                   'priorityStructure'], 1)
+    # print(df.columns)
+    new_df = df.groupby(df.columns.tolist()).size().reset_index().rename(columns={0: 'count'})
+    wtd_count = new_df['analysisOutOfPriorityPercentOfDay'] * new_df['count'] / 100
+    new_df['wtd_count'] = list(wtd_count)
+    # print(new_df)
+    new_df['sum_wtd_count'] = new_df.groupby(['analysisWdid', 'locationWdid'])['wtd_count'].transform('sum')
+    new_df['priority_sum_wtd_count'] = new_df.groupby(['analysisWdid', 'priorityWdid'])['wtd_count'].transform('sum')
+    new_df = new_df.drop(['analysisOutOfPriorityPercentOfDay', 'count', 'wtd_count'], 1)
+    new_df = new_df.drop_duplicates()
+    # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
+    print(new_df)
+    new_df.to_csv('yearly_networks_v2/network_' + year, index = False)
 
 ######################################################################################################################
 
