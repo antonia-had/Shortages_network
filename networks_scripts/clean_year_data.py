@@ -37,30 +37,36 @@ import networkx as nx
 
 '''Create .csv files with network edges and edge attributes'''
 
-path = 'yearly_data_lite/'
-years_list = os.listdir(path)
-# years_list.remove('.DS_Store')
-# years_list = ['2008.csv']
-print(years_list)
-# years_list = years_list[1:2]
-
-for year in years_list:
-    print(year)
-    df = pd.read_csv(path + year)
-    df = df.drop(['analysisDate', 'analysisStructureName', 'locationStructure',
-                   'priorityStructure'], 1)
-    # print(df.columns)
-    new_df = df.groupby(df.columns.tolist()).size().reset_index().rename(columns={0: 'count'})
-    wtd_count = new_df['analysisOutOfPriorityPercentOfDay'] * new_df['count'] / 100
-    new_df['wtd_count'] = list(wtd_count)
-    # print(new_df)
-    new_df['sum_wtd_count'] = new_df.groupby(['analysisWdid', 'locationWdid'])['wtd_count'].transform('sum')
-    new_df['priority_sum_wtd_count'] = new_df.groupby(['analysisWdid', 'priorityWdid'])['wtd_count'].transform('sum')
-    new_df = new_df.drop(['analysisOutOfPriorityPercentOfDay', 'count', 'wtd_count'], 1)
-    new_df = new_df.drop_duplicates()
-    # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
-    print(new_df)
-    new_df.to_csv('yearly_networks_v2/network_' + year, index = False)
+# path = 'yearly_data_lite/'
+# years_list = os.listdir(path)
+# # years_list.remove('.DS_Store')
+# # years_list = ['2008.csv']
+# print(years_list)
+# # years_list = years_list[1:2]
+#
+# for year in years_list:
+#     print(year)
+#     df = pd.read_csv(path + year)
+#     # drop unnecessary columns
+#     df = df.drop(['analysisDate',  'locationStructure', 'locationWdid'], 1)
+#     # print(df.columns)
+#     #
+#     new_df = df.groupby(df.columns.tolist()).size().reset_index().rename(columns={0: 'count'})
+#     wtd_count = new_df['analysisOutOfPriorityPercentOfDay'] * new_df['count'] / 100
+#     # add wtd_count column to data frame
+#     new_df['wtd_count'] = list(wtd_count)
+#
+#     # sum number of days analysisWdid was put out of priority by a specific locationWdid
+#     #new_df['sum_wtd_count'] = new_df.groupby(['analysisWdid', 'locationWdid'])['wtd_count'].transform('sum')
+#     new_df['sum_wtd_count'] = new_df.groupby(['analysisWdid', 'priorityWdid'])['wtd_count'].transform('sum')
+#     new_df = new_df.drop(['analysisOutOfPriorityPercentOfDay', 'count', 'wtd_count'], 1)
+#     new_df = new_df.drop_duplicates()
+#     # sort dataframe by sum_wtd_count in descending order
+#     new_df = new_df.sort_values(by=['sum_wtd_count'], ascending=False)
+#     new_df = new_df.rename(columns={"analysisStructureName": "analysisStructure"})
+#     # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
+#     print(new_df)
+#     new_df.to_csv('../R_networks_scripts/network_csv_files/priorityWdid/v2_network_' + year, index = False)
 
 ######################################################################################################################
 
@@ -83,7 +89,7 @@ for year in years_list:
 
 '''Add node attributes to network files'''
 
-#
+
 # def make_year_network(year):
 #     # enter year in YYYY string format
 #
@@ -107,11 +113,11 @@ for year in years_list:
 #     nx.set_node_attributes(G, name='netAbs', values=vol_dict)
 #
 #     return G
-#
-# year = '2000'
-# G = make_year_network(year)
-# # print(G.nodes())
-# print(G.node[5103660]['latitude'], G.node[5103660]['longitude'], G.node[5103660]['netAbs'])
+
+year = '2000'
+G = make_year_network(year)
+# print(G.nodes())
+print(G.node[5103660]['latitude'], G.node[5103660]['longitude'], G.node[5103660]['netAbs'])
 
 ###################################################################################################################
 

@@ -60,10 +60,10 @@ for year in years:
     print(mapping)
     H = nx.relabel_nodes(G, mapping)
 
-    # only select top 100 nodes by degree
+    # only select top 100% nodes by degree
     degree = H.degree()
     N = 100
-    top_nodes = sorted(degree, key=lambda x: x[1], reverse=True)[:N]
+    top_nodes = sorted(degree, key=lambda x: x[1], reverse=True)#[:N]
     top_nodes_list = [n for n, d in top_nodes]
     Hcc = H.subgraph(top_nodes_list)
 
