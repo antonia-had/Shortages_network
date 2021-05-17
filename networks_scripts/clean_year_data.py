@@ -37,16 +37,16 @@ import networkx as nx
 
 '''Create .csv files with network edges and edge attributes'''
 
-# path = 'yearly_data_lite/'
-# years_list = os.listdir(path)
-# # years_list.remove('.DS_Store')
+# path = 'monthly_data/'
+# m_list = os.listdir(path)
+# m_list.remove('.DS_Store')
 # # years_list = ['2008.csv']
-# print(years_list)
+# print(m_list)
 # # years_list = years_list[1:2]
 #
-# for year in years_list:
-#     print(year)
-#     df = pd.read_csv(path + year)
+# for m in m_list:
+#     print(m)
+#     df = pd.read_csv(path + m, index_col=[0])
 #     # drop unnecessary columns
 #     df = df.drop(['analysisDate',  'locationStructure', 'locationWdid'], 1)
 #     # print(df.columns)
@@ -66,7 +66,7 @@ import networkx as nx
 #     new_df = new_df.rename(columns={"analysisStructureName": "analysisStructure"})
 #     # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
 #     print(new_df)
-#     new_df.to_csv('../R_networks_scripts/network_csv_files/priorityWdid/v2_network_' + year, index = False)
+#     new_df.to_csv('../R_networks_scripts/network_csv_files/priorityWdid/monthly/' + m, index = False)
 
 ######################################################################################################################
 
@@ -114,10 +114,10 @@ import networkx as nx
 #
 #     return G
 
-year = '2000'
-G = make_year_network(year)
-# print(G.nodes())
-print(G.node[5103660]['latitude'], G.node[5103660]['longitude'], G.node[5103660]['netAbs'])
+# year = '2000'
+# G = make_year_network(year)
+# # print(G.nodes())
+# print(G.node[5103660]['latitude'], G.node[5103660]['longitude'], G.node[5103660]['netAbs'])
 
 ###################################################################################################################
 
