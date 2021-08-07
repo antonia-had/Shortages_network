@@ -1,0 +1,118 @@
+library(tidyverse)
+library(igraph)
+library(ggraph)
+library(visNetwork)
+library(networkD3)
+library(dplyr)
+library(ggplot2)
+library(svglite)
+library(lubridate)
+
+
+# set directory
+setwd('/Users/ananyagangadhar/Desktop/M.Eng\ Project/Shortages_network/R_networks_scripts')
+
+# Line plot showing mean annual streamflow
+strmflw <- read.table('ucrb_annual_flows', header = TRUE)
+head(strmflw)
+ggplot(data=strmflw, aes(x=year_nu, y=mean_va, group=1)) +
+  geom_line(color="skyblue") +
+  geom_point(color="darkblue") +
+  theme_classic() +
+  ggtitle("Mean annual basin streamflow 1952-2020") +
+  labs(y="Streamflow (cfs)", x = "Year") +
+  scale_x_continuous(breaks = seq(1900, 2020, by = 5), limits = c(1900,2020)) +
+  geom_vline(xintercept = 2011, color='darkblue', linetype='dotted') +
+  geom_vline(xintercept = 2007, color='darkblue', linetype='dotted') +
+  geom_vline(xintercept = 2002, color='darkblue', linetype='dotted') +
+  geom_vline(xintercept = 1987, color='red', linetype='solid') +
+  theme(axis.text.x = element_text(size=8, angle=50, vjust=1,hjust=1))
+
+###########################################################################################
+# CREATE ANNUAL NETWORK
+
+# set directory
+
+# only include top 200 users by seniority
+users <- read.csv('../data/CDSS_WaterRights.csv')
+users <- head(users[order(users$Priority.Admin.No),], 200)
+users <- head(users[order(users$Stream.Mile),], 200)
+
+top_users <- users$WDID
+for (i in 1:length(top_users)){
+  top_users[i] <- toString(top_users[i])
+}
+
+
+years <- c(1900:2019)
+
+comps <- c()
+sr_users <- c()
+
+# iterate through each year
+for (yr in years){
+  
+  yr
+  
+  # read subset of network .csv file
+  data <- read.csv(paste('network_csv_files/annual/', yr, '.csv', sep = ""))
+  
+  ##########################################################################################
+  
+  # create nodes
+  from <- unique(data[c('priorityWdid','priorityStructure')]) %>% rename(wdid = priorityWdid) %>%
+    rename(structure = priorityStructure)
+  to <- unique(data[c('analysisWdid','analysisStructure')]) %>% rename(wdid = analysisWdid) %>% 
+    rename(structure = analysisStructure)
+  nodes <- unique(rbind(from, to))
+  nodes
+  
+  # create edges
+  edges <- data[c('priorityWdid', 'analysisWdid', 'sum_wtd_count')] %>% 
+    rename(from = priorityWdid) %>% rename(to = analysisWdid)  %>% 
+    rename(edgeWt = sum_wtd_count)
+  
+  # create network using igraph package
+  network <- graph_from_data_frame(d = edges, vertices = nodes, directed = TRUE)
+  
+  # create subnetwork with only top 200 users by seniority
+  sub_nodes <- intersect(nodes$wdid, top_users)
+  sub_nodes
+  subnet <- induced.subgraph(network, sub_nodes)
+  ##########################################################################################
+  
+  # Calculate number of components in each network
+  comps <- cbind(comps, count_components(network))
+  
+  # calculate number of senior users in each network
+  sr_users <- rbind(sr_users, length(V(subnet)))
+  
+}
+############################################################################################
+############################################################################################
+############################################################################################
+
+# draw bar plot of number of components
+df1 <- data.frame(year=years, users=comps)
+p <- ggplot(data=df1, aes(x=year, y=comps)) +
+  geom_bar(stat="identity", fill = 'skyblue') +
+  # geom_text(aes(label=comps), vjust=-0.3, size=3.5) +
+  theme_classic() + 
+  ggtitle("Number of network components each year") +
+  labs(y="Number of components", x = "Year") +
+  scale_x_continuous(breaks = seq(1900, 2020, by = 5)) +
+  theme(axis.text.x = element_text(size=8, angle=50, vjust=1,hjust=1))
+p
+
+
+# draw bar plot of number of top 200 senior-most users each year
+df2 <- data.frame(year=years, users=sr_users)
+q <- ggplot(data=df2, aes(x=year, y=users)) +
+  geom_bar(stat="identity", fill = 'cornflowerblue') +
+  # geom_text(aes(label=users), vjust=-0.3, size=3.5) +
+  theme_classic() +
+  ggtitle("Number of top 200 senior users each year") +
+  labs(y="Number of users", x = "Year") +
+  scale_x_continuous(breaks = seq(1900,2020, by = 5)) +
+  theme(axis.text.x = element_text(size=8, angle=50, vjust=1,hjust=1))
+q

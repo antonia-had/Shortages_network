@@ -21,6 +21,7 @@ for (i in 1:length(top_users)){
 
 
 years <- c(2000:2019)
+years <- c(2000)
 
 comps <- c()
 sr_users <- c()

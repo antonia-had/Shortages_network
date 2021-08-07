@@ -36,10 +36,11 @@ import networkx as nx
 ######################################################################################################
 
 '''Create .csv files with network edges and edge attributes'''
-
-# path = 'monthly_data/'
+#
+# path = 'yearly_data/'
 # m_list = os.listdir(path)
-# m_list.remove('.DS_Store')
+# m_list.sort()
+# # m_list.remove('.DS_Store')
 # # years_list = ['2008.csv']
 # print(m_list)
 # # years_list = years_list[1:2]
@@ -47,8 +48,12 @@ import networkx as nx
 # for m in m_list:
 #     print(m)
 #     df = pd.read_csv(path + m, index_col=[0])
-#     # drop unnecessary columns
-#     df = df.drop(['analysisDate',  'locationStructure', 'locationWdid'], 1)
+#     # # drop unnecessary columns
+#     # try:
+#     #     df = df.drop(['analysisDate'], 1)
+#     # except:
+#     #     print('Problem')
+#     df = df.drop(['analysisDate'], 1)
 #     # print(df.columns)
 #     #
 #     new_df = df.groupby(df.columns.tolist()).size().reset_index().rename(columns={0: 'count'})
@@ -65,25 +70,25 @@ import networkx as nx
 #     new_df = new_df.sort_values(by=['sum_wtd_count'], ascending=False)
 #     new_df = new_df.rename(columns={"analysisStructureName": "analysisStructure"})
 #     # new_df = new_df.groupby(new_df.columns.tolist()).sum().reset_index().rename(columns={0: 'sum_wtd_count'})
-#     print(new_df)
-#     new_df.to_csv('../R_networks_scripts/network_csv_files/priorityWdid/monthly/' + m, index = False)
+#     # print(new_df)
+#     new_df.to_csv('../R_networks_scripts/network_csv_files/annual/' + m, index = False)
 
 ######################################################################################################################
 
 '''Create .csv file with network node attributes'''
-#
-# df = pd.read_csv('../data/DWR_REST_WaterRights.csv')
-# print(df.head())
-#
-# new_df = df.groupby('wdid').netAbsolute.sum().reset_index().rename(columns={'netAbsolute': 'sum_netAbs'})
-# merged = pd.merge(left=df, right=new_df, left_on='wdid', right_on='wdid')
-# print(merged.head())
-# merged = merged.drop(['netAbsolute', 'adminNumber'], 1)
-# merged = merged.drop_duplicates()
-#
-# print(merged.columns)
-#
-# merged.to_csv('../data/Attributes.csv', index = False)
+
+df = pd.read_csv('../data/CDSS_WaterRights.csv')
+print(df.head())
+df.columns = ['wdid', 'streamMile', 'adjudicationDate', 'adminNumber', 'netAbsolute', 'lat', 'long', 'lines']
+new_df = df.groupby('wdid').netAbsolute.sum().reset_index().rename(columns={'netAbsolute': 'sum_netAbs'})
+merged = pd.merge(left=df, right=new_df, left_on='wdid', right_on='wdid')
+print(merged.head())
+merged = merged.drop(['lines', 'adjudicationDate'], 1)
+merged = merged.drop_duplicates()
+
+print(merged.columns)
+
+merged.to_csv('../data/Attributes.csv', index = False)
 
 ###################################################################################################################
 

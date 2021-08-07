@@ -1,44 +1,46 @@
-import networkx as nx
+# sorts all structure call analysis data in water_rights_scripts/fetched_data by year
+#
+
+import os
 import pandas as pd
+import csv
 import numpy as np
 import math
-import matplotlib.pyplot as plt
-from matplotlib.gridspec import GridSpec
-from cartopy.io.shapereader import Reader
-from cartopy.feature import ShapelyFeature
-import cartopy.crs as ccrs
-import cartopy.io.img_tiles as cimgt
-import cartopy.feature as cfeature
-import seaborn as sns
-from matplotlib.colors import ListedColormap
-import os
 
+# make list of years
+years = [str(i) for i in range(1900,1905)]
+# years = years[:1]
 
+# loop through all fetched_data
+path = '../water_right_scripts/fetched_data'
+users_list = os.listdir(path)
+users_list.sort()
+users_list = users_list[1:]  # removes .DS store file name
+# users_list = users_list[:5]
+print(users_list)
 
+col_list = ['analysisDate', 'analysisWdid', 'analysisStructureName', 'analysisOutOfPriorityPercentOfDay',
+            'priorityWdid',	'priorityStructure']
 
-path = '../R_networks_scripts/network_csv_files/priorityWdid/monthly/'
-m_list = os.listdir(path)
-#m_list.remove('.DS_Store')
-m_list = ['2003-09.csv']
+# loop through each year
+for year in years:
+    print(year)
+    appended_data = []
+    # loop through all users
+    for user in users_list:
+        print(user)
+        user_info = pd.read_csv(path + '/' + user, dtype=object, error_bad_lines=False, usecols=col_list)
+        # check first row date to see if user was active that year
+        if user_info['analysisDate'].iloc[0].str.contains(year):
+            # extract all rows corresponding to that year
+            new_df = user_info[user_info['analysisDate'].str.contains(year)]
 
-print(m_list)
+            # drop all rows with analysisOutOfPriorityPercentOfDay = 0
+            new_df = new_df.loc[new_df.analysisOutOfPriorityPercentOfDay > 0]
 
-attr = pd.read_csv('../R_networks_scripts/network_csv_files/priorityWdid/Attributes.csv', index_col=[0])
-new_df = pd.DataFrame()
+            appended_data.append(new_df)
 
-for m in m_list:
-    print(m)
-    df = pd.read_csv(path + m)
-    #df = df.sort_values('analysisStreamMile')
-    new_df = pd.merge(df, attr, how="left", left_on=["analysisWdid"], right_on=["wdid"])
-    new_df = new_df.rename(columns={"streamMile": "analysisStreamMile", "sum_netAbs": "analysisNetAbs",
-                           "waterDistrict": "analysisWaterDistrict", "sum_wtd_count": "sumWtdCount"})
-    #print(new_df.columns)
-    new_df = pd.merge(new_df, attr, how="left", left_on=["priorityWdid"], right_on=["wdid"])
-    new_df = new_df.rename(columns={"streamMile": "priorityStreamMile", "sum_netAbs": "priorityNetAbs",
-                           "waterDistrict": "priorityWaterDistrict"})
-    #df['edgeWt'] = df['analysisNetAbs'] * df['sumWtdCount']
-    df = new_df
-    print(df.columns)
+    appended_data = pd.concat(appended_data)
+    appended_data.to_csv('yearly_data/' + year + '.csv')
 
-    df.to_csv(path + m, index = False)
+#######################################################################
